@@ -1,25 +1,12 @@
-$primaryBtn: #df2070;
-$textColor: #ebe5e5;
-header {
-  background: #8c8cda;
-  color: #ccc;
-  display: flex;
-  justify-content: center;
-  button {
-    background: $primaryBtn;
-    color: $textColor;
-    &:hover {
-      background: #8c8cda;
-    }
-    &::after {
-      content: " here";
-    }
-  }
-}
-header button {
+@import "./variables";
+@import "./header";
+/* header button {
   background: $primaryBtn;
   color: $textColor;
-}
-.contact button {
-  background: $primaryBtn;
+} */
+.contact {
+  @extend header;
+  background: lightcoral;
+  background: orange; //overridden
+  width: 100% -20%;
 }

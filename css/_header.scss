@@ -1,0 +1,28 @@
+//Create Function
+@mixin flexCenter($direction, $background) {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+  background: $background;
+}
+
+header {
+  @include flexCenter(column, red);
+  height: 100vh;
+  background: #90d8f0;
+  color: rgb(90, 87, 87);
+  //Nesting
+  button {
+    background: $primaryBtn;
+    color: $textColor;
+    //psuedo elements
+    &:hover {
+      background: #8c8cda;
+    }
+    &::after {
+      content: " here";
+    }
+  }
+}
