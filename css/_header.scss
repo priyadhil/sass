@@ -1,6 +1,5 @@
 //Create Function
 @mixin flexCenter($direction, $background) {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,20 +8,42 @@
 }
 
 header {
-  @include flexCenter(column, red);
-  height: 100vh;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+
   background: #90d8f0;
   color: rgb(90, 87, 87);
   //Nesting
+  .search {
+    padding: 0 0.5rem 0 0.5rem;
+  }
+  input {
+    width: 100px;
+    height: 25px;
+  }
   button {
     background: $primaryBtn;
     color: $textColor;
+    border: none;
     //psuedo elements
     &:hover {
       background: #8c8cda;
     }
     &::after {
-      content: " here";
+      content: "\e000";
     }
+  }
+
+  .news {
+    color: $textColor;
+    padding: 0 0.2rem 0 0;
+  }
+  .detail {
+    float: right;
+    padding: 0 1rem 0 1rem;
+    box-sizing: border-box;
+    box-shadow: 2px 5px 4px 2px #60c0c0;
+    cursor: pointer;
   }
 }

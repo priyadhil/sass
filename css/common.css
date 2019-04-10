@@ -1,44 +1,109 @@
-header, .contact {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+header {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: red;
-  height: 100vh;
   background: #90d8f0;
   color: #5a5757;
 }
 
-header button, .contact button {
-  background: #df2070;
-  color: #ebe5e5;
+header .search {
+  padding: 0 0.5rem 0 0.5rem;
 }
 
-header button:hover, .contact button:hover {
+header input {
+  width: 100px;
+  height: 25px;
+}
+
+header button {
+  background: #df2070;
+  color: #ebe5e5;
+  border: none;
+}
+
+header button:hover {
   background: #8c8cda;
 }
 
-header button::after, .contact button::after {
-  content: " here";
+header button::after {
+  content: "\e000";
+}
+
+header .news {
+  color: #ebe5e5;
+  padding: 0 0.2rem 0 0;
+}
+
+header .detail {
+  float: right;
+  padding: 0 1rem 0 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 2px 5px 4px 2px #60c0c0;
+          box-shadow: 2px 5px 4px 2px #60c0c0;
+  cursor: pointer;
 }
 
 /* header button {
   background: $primaryBtn;
   color: $textColor;
 } */
-.contact {
+.sidebar {
   background: lightcoral;
   background: orange;
-  width: 100% -20%;
+  width: 25%;
+}
+
+.sidebar nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  list-style: none;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.sidebar nav ul li:hover {
+  background: #d88d01;
+}
+
+.sidebar nav ul li a {
+  display: block;
+  text-decoration: none;
+  font-size: 120%;
+  color: #ebe5e5;
+}
+
+.sidebar nav ul li a:active {
+  background: #d88d01;
+}
+
+.sidebar nav .icon-home:before {
+  content: "\e006";
+}
+
+.sidebar nav .icon-user:before {
+  content: "\e007";
+}
+
+.sidebar nav .icon-top:before {
+  content: "\e0a5";
+}
+
+.sidebar nav .icon-theme:before {
+  content: "\e104";
+}
+
+.sidebar nav .icon-dump:before {
+  content: "\e0e9";
+}
+
+.sidebar nav .text-muted {
+  color: #f5f2e9;
 }
 /*# sourceMappingURL=common.css.map */

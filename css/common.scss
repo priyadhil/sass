@@ -4,9 +4,49 @@
   background: $primaryBtn;
   color: $textColor;
 } */
-.contact {
-  @extend header;
+.sidebar {
   background: lightcoral;
   background: orange; //overridden
-  width: 100% -20%;
+  width: 100% - 75%;
+
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    ul li {
+      list-style: none;
+      padding: 0.5rem 0.5rem 0.5rem 1rem;
+      &:hover {
+        background: #d88d01;
+      }
+    }
+    ul li a {
+      display: block;
+      text-decoration: none;
+      font-size: 120%;
+      color: $textColor;
+      &:active {
+        background: #d88d01;
+      }
+    }
+    .icon-home:before {
+      content: "\e006";
+    }
+    .icon-user:before {
+      content: "\e007";
+    }
+    .icon-top:before {
+      content: "\e0a5";
+    }
+    .icon-theme:before {
+      content: "\e104";
+    }
+    .icon-dump:before {
+      content: "\e0e9";
+    }
+    .text-muted {
+      color: #f5f2e9;
+    }
+  }
 }

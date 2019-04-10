@@ -5,19 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/common.css" />
   </head>
   <body>
     <header>
-      <h1>hello welcome</h1>
-      <button>search</button>
-    </header>
-    <div class="contact">
-      <button>Submit</button>
-      <div class="info">
-        <h1>My contact info</h1>
-        <p>this is my info</p>
+      <div class="logo text-left"><h1>welcome</h1></div>
+      <div class="search text-center">
+        <form>
+          <input type="text" name="" id="search" placeholder="search..." />
+          <button></button>
+        </form>
       </div>
+      <div class="news">
+        <h3>News<span>On</span><span>off</span></h3>
+      </div>
+      <div class="detail text-right">
+        <h3>DUMP</h3>
+      </div>
+    </header>
+    <div class="container-fluid"></div>
+    <div class="sidebar">
+      <nav>
+        <ul>
+          <li class="active"><a href=""> <span aria-hidden="true" class="icon-home text-muted"></span>Home</a></li>
+          <li><a href=""><span aria-hidden="true" class="icon-user text-info"></span>Users</a></li>
+          <li><a href=""><span aria-hidden="true" class="icon-top text-dark"></span>Toppers</a></li>
+          <li><a href=""><span aria-hidden="true" class="icon-theme text-danger"></span>Theme's</a></li>
+          <li><a href=""><span aria-hidden="true" class="icon-dump text-success"></span>DumpTV</a></a></li>
+        </ul>
+      </nav>
     </div>
   </body>
 </html>
