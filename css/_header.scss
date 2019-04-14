@@ -1,4 +1,3 @@
-//Create Function
 @mixin flexCenter($direction, $background) {
   display: flex;
   justify-content: center;
@@ -9,26 +8,43 @@
 
 header {
   width: 100%;
-  display: inline-flex;
-  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  color: #df1f6f;
+  background: linear-gradient(0.1turn, #bde9f8, #04c5c5, #bde9f8);
+  h2 {
+    filter: drop-shadow(-10px 12px 3px rgba(10, 131, 131, 0.3));
+  }
+  .logo {
+    padding: 1rem;
 
-  background: #90d8f0;
-  color: rgb(90, 87, 87);
-  //Nesting
-  .search {
-    padding: 0 0.5rem 0 0.5rem;
+    box-sizing: border-box;
+    box-shadow: inset -3px -3px 3px 4px #73cece;
+    border-radius: 5px;
+    cursor: pointer;
   }
   input {
-    width: 100px;
-    height: 25px;
+    margin-top: 20px;
+    background: $textColor;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+    height: 35px;
+    color: $primaryBtn;
+    &::placeholder {
+      color: $primaryBtn;
+    }
   }
   button {
     background: $primaryBtn;
     color: $textColor;
+    cursor: pointer;
     border: none;
-    //psuedo elements
+    border-radius: 5px;
+    margin: -2.3rem;
     &:hover {
-      background: #8c8cda;
+      background: $textColor;
+      color: $primaryBtn;
     }
     &::after {
       content: "\e000";
@@ -37,13 +53,18 @@ header {
 
   .news {
     color: $textColor;
-    padding: 0 0.2rem 0 0;
+    // padding: 0 0.2rem 0 0;
   }
   .detail {
-    float: right;
-    padding: 0 1rem 0 1rem;
-    box-sizing: border-box;
-    box-shadow: 2px 5px 4px 2px #60c0c0;
-    cursor: pointer;
+    margin-top: 5px;
+    filter: drop-shadow(-1px 6px 3px rgba(20, 173, 187, 0.7));
+    .tag {
+      padding: 0.7rem;
+      clip-path: polygon(30px 0%, 100% 0%, 100% 100%, 30px 100%, 0 50%);
+      box-sizing: border-box;
+      box-shadow: inset 20px -2px 20px 4px #73cece;
+      border-radius: 2px;
+      cursor: pointer;
+    }
   }
 }

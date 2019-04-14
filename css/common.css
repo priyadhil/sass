@@ -1,32 +1,67 @@
 header {
   width: 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #90d8f0;
-  color: #5a5757;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #df1f6f;
+  background: linear-gradient(0.1turn, #bde9f8, #04c5c5, #bde9f8);
 }
 
-header .search {
-  padding: 0 0.5rem 0 0.5rem;
+header h2 {
+  -webkit-filter: drop-shadow(-10px 12px 3px rgba(10, 131, 131, 0.3));
+          filter: drop-shadow(-10px 12px 3px rgba(10, 131, 131, 0.3));
+}
+
+header .logo {
+  padding: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: inset -3px -3px 3px 4px #73cece;
+          box-shadow: inset -3px -3px 3px 4px #73cece;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 header input {
-  width: 100px;
-  height: 25px;
+  margin-top: 20px;
+  background: #ebe5e5;
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+  height: 35px;
+  color: #df1f6f;
+}
+
+header input::-webkit-input-placeholder {
+  color: #df1f6f;
+}
+
+header input:-ms-input-placeholder {
+  color: #df1f6f;
+}
+
+header input::-ms-input-placeholder {
+  color: #df1f6f;
+}
+
+header input::placeholder {
+  color: #df1f6f;
 }
 
 header button {
-  background: #df2070;
+  background: #df1f6f;
   color: #ebe5e5;
+  cursor: pointer;
   border: none;
+  border-radius: 5px;
+  margin: -2.3rem;
 }
 
 header button:hover {
-  background: #8c8cda;
+  background: #ebe5e5;
+  color: #df1f6f;
 }
 
 header button::after {
@@ -35,27 +70,39 @@ header button::after {
 
 header .news {
   color: #ebe5e5;
-  padding: 0 0.2rem 0 0;
 }
 
 header .detail {
-  float: right;
-  padding: 0 1rem 0 1rem;
+  margin-top: 5px;
+  -webkit-filter: drop-shadow(-1px 6px 3px rgba(20, 173, 187, 0.7));
+          filter: drop-shadow(-1px 6px 3px rgba(20, 173, 187, 0.7));
+}
+
+header .detail .tag {
+  padding: 0.7rem;
+  -webkit-clip-path: polygon(30px 0%, 100% 0%, 100% 100%, 30px 100%, 0 50%);
+          clip-path: polygon(30px 0%, 100% 0%, 100% 100%, 30px 100%, 0 50%);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-box-shadow: 2px 5px 4px 2px #60c0c0;
-          box-shadow: 2px 5px 4px 2px #60c0c0;
+  -webkit-box-shadow: inset 20px -2px 20px 4px #73cece;
+          box-shadow: inset 20px -2px 20px 4px #73cece;
+  border-radius: 2px;
   cursor: pointer;
 }
 
-/* header button {
-  background: $primaryBtn;
-  color: $textColor;
-} */
+body {
+  margin: 0;
+  padding: 0;
+  background: #ebe5e5;
+  color: #ebe5e5;
+}
+
 .sidebar {
-  background: lightcoral;
-  background: orange;
-  width: 25%;
+  float: left;
+  width: 16.67%;
+  height: 100vh;
+  border: 2px solid #df1f6f;
+  background: #df1f6f;
 }
 
 .sidebar nav ul {
@@ -69,7 +116,11 @@ header .detail {
 }
 
 .sidebar nav ul li:hover {
-  background: #d88d01;
+  background: #ebe5e5;
+}
+
+.sidebar nav ul li .active {
+  background: #9e7f95;
 }
 
 .sidebar nav ul li a {
@@ -79,8 +130,13 @@ header .detail {
   color: #ebe5e5;
 }
 
-.sidebar nav ul li a:active {
-  background: #d88d01;
+.sidebar nav ul li a:hover {
+  color: #df1f6f;
+  display: block;
+}
+
+.sidebar nav .dropdown-container {
+  display: none;
 }
 
 .sidebar nav .icon-home:before {
@@ -105,5 +161,40 @@ header .detail {
 
 .sidebar nav .text-muted {
   color: #f5f2e9;
+}
+
+.grid-container {
+  color: #bde9f8;
+  float: right;
+  width: 82.34%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+.grid-container div {
+  padding: 20px 0;
+}
+
+.grid-container .card {
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 3px 2px 3px 3px #ccc;
+          box-shadow: 3px 2px 3px 3px #ccc;
+  border-radius: 5px;
+}
+
+.grid-container2 {
+  width: 82.34%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  grid-gap: 1rem;
+  padding: 1rem;
 }
 /*# sourceMappingURL=common.css.map */

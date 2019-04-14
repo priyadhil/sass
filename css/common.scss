@@ -1,14 +1,18 @@
 @import "./variables";
 @import "./header";
-/* header button {
-  background: $primaryBtn;
+body {
+  margin: 0;
+  padding: 0;
+  background: $textColor;
   color: $textColor;
-} */
-.sidebar {
-  background: lightcoral;
-  background: orange; //overridden
-  width: 100% - 75%;
+}
 
+.sidebar {
+  float: left;
+  width: 100% - 83.33%;
+  height: 100vh;
+  border: 2px solid $primaryBtn;
+  background: $primaryBtn; //overridden
   nav {
     ul {
       margin: 0;
@@ -18,7 +22,10 @@
       list-style: none;
       padding: 0.5rem 0.5rem 0.5rem 1rem;
       &:hover {
-        background: #d88d01;
+        background: $textColor;
+      }
+      .active {
+        background: #9e7f95;
       }
     }
     ul li a {
@@ -26,9 +33,13 @@
       text-decoration: none;
       font-size: 120%;
       color: $textColor;
-      &:active {
-        background: #d88d01;
+      &:hover {
+        color: $primaryBtn;
+        display: block;
       }
+    }
+    .dropdown-container {
+      display: none;
     }
     .icon-home:before {
       content: "\e006";
@@ -49,4 +60,29 @@
       color: #f5f2e9;
     }
   }
+}
+.grid-container {
+  color: #bde9f8;
+  float: right;
+  width: 100% - 17.66%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  padding: 1rem;
+  div {
+    padding: 20px 0;
+  }
+  .card {
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 3px 2px 3px 3px #ccc;
+    border-radius: 5px;
+  }
+}
+.grid-container2 {
+  width: 100% - 17.66%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 1rem;
+  padding: 1rem;
 }
