@@ -115,9 +115,6 @@ body {
 
 .sidebar,
 .sidebar1 {
-  position: fixed;
-  top: 16%;
-  left: 0;
   float: left;
   border: 2px solid #df1f6f;
   background: #df1f6f;
