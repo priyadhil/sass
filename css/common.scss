@@ -4,13 +4,17 @@ body {
   margin: 0;
   padding: 0;
   background: $textColor;
-  color: $textColor;
+  color: black;
 }
 
-.sidebar {
+.sidebar,
+.sidebar1 {
+  position: fixed;
+  top: 16%;
+  left: 0;
   float: left;
-  width: 100% - 83.33%;
-  height: 100vh;
+  //width: 100% - 83.33%;
+  //height: 100vh;
   border: 2px solid $primaryBtn;
   background: $primaryBtn; //overridden
   nav {
@@ -72,11 +76,78 @@ body {
   div {
     padding: 20px 0;
   }
+
   .card {
     background: #fff;
     box-sizing: border-box;
     box-shadow: 3px 2px 3px 3px #ccc;
     border-radius: 5px;
+  }
+
+  .flip-bg {
+    position: absolute;
+    // grid-template-columns: auto auto;
+    box-shadow: rgba(0, 0, 0, 0.45) 5px 10px 20px 10px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .flip-box {
+    // position: absolute;
+    transition: 1.5s ease-out;
+    transform-style: preserve-3d;
+    background-color: orange;
+    // grid-template-columns: auto auto;
+    width: 41%;
+    height: 100%;
+    /* top: 0; */
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+  .img-compress {
+    height: 100%;
+    width: 100%;
+  }
+  .flip-box-inner {
+    // position: absolute;
+    width: 90%;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+    url("/img/bg.jpg");
+    background-size: cover; */
+    transition: transform 01.5s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-box-front,
+  .flip-box-back {
+    position: absolute;
+    /* width: 82.34%; */
+    height: 100%;
+    top: 20%;
+    backface-visibility: hidden;
+  }
+
+  .flip-box-front {
+    background-color: transparent;
+  }
+
+  .flip-box-back {
+    position: relative;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.45) 5px 10px 20px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
+    background-repeat: no-repeat;
+
+    top: 50%;
   }
 }
 .grid-container2 {
@@ -85,4 +156,58 @@ body {
   grid-template-columns: auto auto auto auto;
   grid-gap: 1rem;
   padding: 1rem;
+}
+
+.container1 {
+  background-color: $textColor;
+  display: grid;
+  /* width: 100vw;
+    height: 100vh; */
+  padding: 0.5em;
+  grid-template-columns: 180px 1fr 1fr 1fr;
+  grid-template-rows: 80px 1fr 1fr 80px;
+  grid-gap: 0.5rem;
+  grid-template-areas:
+    "header1 header1 header1 header1"
+    "sidebar1 content-1 content-2 content-2"
+    "sidebar1 content-3 content-4 content-5"
+    "footer footer footer footer";
+}
+
+.container1 > div {
+  box-shadow: rgba(0, 0, 0, 0.45) 5px 10px 20px 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  // background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+.header1 {
+  grid-area: header1;
+}
+
+.sidebar1 {
+  grid-area: sidebar1;
+}
+
+.content-1 {
+  grid-area: content-1;
+}
+
+.content-2 {
+  grid-area: content-2;
+}
+
+.content-3 {
+  grid-area: content-3;
+}
+.content-4 {
+  grid-area: content-4;
+}
+.content-5 {
+  grid-area: content-5;
+}
+.footer {
+  grid-area: footer;
 }

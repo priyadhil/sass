@@ -6,8 +6,11 @@
   background: $background;
 }
 
+.header1,
 header {
+  top: 0;
   width: 100%;
+  height: 80px;
   display: flex;
   justify-content: space-around;
   color: #df1f6f;
